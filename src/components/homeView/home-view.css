@@ -1,0 +1,42 @@
+.container-space-ship{
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    top: 80px;
+    right: 45px;
+}
+
+.space-ship{
+    transform: rotate(30deg);
+    width: 350px;
+    position: relative;
+    right: 200px;
+}
+
+.text-home-view{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title-game{
+    font-size: 150px;
+    font-weight: 500;
+    letter-spacing: -16px;
+    color: #ffffff;
+    margin: 0;
+    width: 710px;
+    line-height: 135px;
+    text-align: center;
+}
+
+.container-imag-ovni1{
+    width: 405px;
+    position: relative;
+    top: -200px;
+    left: 220px;
+}
+
+.img-ovni1{
+    width: 400px;
+}

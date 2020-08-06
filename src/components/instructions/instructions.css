@@ -1,0 +1,45 @@
+.container-instruction-view{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.ovni2{
+    position: absolute;
+    top: 80px;
+    width: 200px;
+    left: 325px;
+    z-index: 1;
+}
+
+.container-instructions{
+    background-color: #000000c2;
+    border: solid 5px #7F00FF;
+    box-shadow: 0px 0px 40px 10px #7F00FF;
+    border-radius: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    margin: 0 20%;
+    font-size: 30px;
+    padding: 20px 100px;
+    height: 600px;
+    position: relative;
+    top: 70px;
+}
+
+.title-instructions{
+    font-size: 100px;
+    font-weight: 500;
+    margin: 0;
+}
+
+.text-instructions{
+    margin: 20px 0;
+    line-height: 40px;
+    font-size: 30px;
+}

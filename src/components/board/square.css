@@ -1,0 +1,22 @@
+.square{
+    border: solid 2px #00FFFF;
+    background: none;
+    width: 30px;
+    height: 30px;
+    margin: 3px;
+}
+
+.board{
+    background-color: #000000c2;
+    width: fit-content;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+thead, .letter{
+    color: #ffffff;
+}
+
+table{
+    text-align: center;
+}

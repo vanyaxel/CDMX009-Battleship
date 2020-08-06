@@ -1,161 +1,68 @@
-# Battleship
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Índice
+## Available Scripts
 
-* [1. Preámbulo](#1-preámbulo)
-* [2. Resumen del proyecto](#2-resumen-del-proyecto)
-* [3. Objetivos de aprendizaje](#3-objetivos-de-aprendizaje)
-* [4. Consideraciones generales](#4-consideraciones-generales)
-* [5. Pistas, tips y lecturas complementarias](#5-pistas-tips-y-lecturas-complementarias)
-* [6. Hacker edition](#6-hacker-edition)
+In the project directory, you can run:
 
-## 1. Preámbulo
+### `npm start`
 
-<img
-src="https://user-images.githubusercontent.com/7809496/66518543-dc75c380-eabb-11e9-8fb9-1d96d97a6a8c.png"
-width="100%"/>
+Runs the app in the development mode.<br />
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-Los videojuegos son una verdadera prueba cuando se trata de tecnología. Uno de
-los factores de éxito para el equipo de android, por ejemplo, fue que pudiesen
-tener un juego corriendo en los primeros teléfonos. La idea era que si un juego
-podía ejecutarse en la plataforma, un programa más simple con pantallas mucho
-más fáciles de trabajar que solo tuviese botones y texto debería funcionar aun
-mejor.
+The page will reload if you make edits.<br />
+You will also see any lint errors in the console.
 
-Entonces la idea de este proyecto es llevar los frameworks de aplicaciones web
-al límite de lo que pueden ofrecer, tratar de explorar sus funcionalidades más
-avanzadas y lograr un producto que se luzca con tu talento y creatividad
-dominando el framework que elijas.
+### `npm test`
 
-## 2. Resumen del proyecto
+Launches the test runner in the interactive watch mode.<br />
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-<img
-src="https://user-images.githubusercontent.com/7809496/66517403-78ea9680-eab9-11e9-8ab4-8d3c2cc21646.png"
-width="100%"/>
+### `npm run build`
 
-Battleship es un juego clásico, con múltiples versiones en juegos de mesa y en
-linea (si no lo conoces, puedes verlo en este link :
-[battle-ship](https://es.wikipedia.org/wiki/Batalla_naval_(juego))).
+Builds the app for production to the `build` folder.<br />
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-El juego es para dos personas. Consiste en que en un tablero cada jugador coloca
-un conjunto de barcos, ocultando su posición del contrincante. Luego, por
-turnos, van anunciando una posición del tablero y el enemigo informa si le han
-dado a uno de sus barcos o no. El juego termina cuando un jugador ha conseguido
-hundir todos los barcos del otro.
+The build is minified and the filenames include the hashes.<br />
+Your app is ready to be deployed!
 
-En este proyecto deberás crear una nueva versión, agregándole algún giro para
-actualizarlo y hacerlo más atractivo para las nuevas generaciones. También, no
-estás atada a hacer este juego sobre barcos, puedes hacerlo con el tema que más
-te guste, siempre y cuando el modo de juego sea parecido.
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-También el juego debe ser para dos jugadores, para lograrlo debes pensar en cómo
-puedes estructurar la información, estado de la aplicación y cómo guardarlos en
-alguna base de datos como __Firebase__ o __MongoDB Stitch__.
+### `npm run eject`
 
-## 3. Objetivos de aprendizaje
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-1. El objetivo principal de hacer este juego es que puedas diseñar un esquema de
-datos y lo apliques a una base de datos conocida, como _firebase_ o _mongodb_.
-Muchas veces el como modeles la información es más importante a como estructures
-tu código, ya que los problemas que puedan aparecer en el futuro tendrán su
-origen acá.
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-2. No menos importante, tendrás que diseñar y mantener el estado dentro de la
-aplicación, esto es la información que usas y guardas temporalmente por cada
-ejecución. Para esto unas herramientas para _react_ que te pueden servir son
-__Redux__ o también __Context API__ así como también los estados internos de
-cada componente. Por el lado de _angular_ tendrás a los __observables__
-y su uso conjunto con los __servicios__ y por supuesto las propiedades que uses
-en cada componente.
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-3. Y finalmente tendrás que diseñar una interfaz llamativa, usando y abusando de
-todo lo que sabes de CSS y animaciones para que tengas un juego vistoso y que
-guste a la gente. Tienes que invitar a jugar tu juego.
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-Tópicos: _react_, _angular_, _redux_, _firebase_, _mongodb stitch_.
+## Learn More
 
-## 4. Consideraciones generales
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-Este proyecto se debe resolver en equipos de 3 personas.
+To learn React, check out the [React documentation](https://reactjs.org/).
 
-La planificación es clave, por lo que debes coordinarte con tu equipo e
-identificar las historias de usuario, priorizarlas y trabajarlas sprint a sprint
-cuidando de que hayan test para el código, se haya hecho test con usuarios sobre
-la usabilidad y cumpliendo con las ceremonias de SCRUM que has aprendido a lo
-largo del bootcamp.
+### Code Splitting
 
-También para este proyecto, usa cualquier framework (_react_, _angular_, etc...)
-cuidando de que se vea bien en las pantallas de celular o computador, que los
-jugadores puedan elegir la plataforma libremente sin prejuicio de la
-jugabilidad. Para esto considera un tamaño variable de pantalla y que los
-elementos del juego se redimensionen dependiendo de ella.
+This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
 
-Para la base de datos, trata de modelar bien cómo guardarás los datos y piensa
-bien el cómo soportar varios usuarios a la vez en diferentes salas de juego.
-Recuerda que "battleship" se juega de a dos. Usa tu creatividad para asignar
-contrincantes a cada jugador.
+### Analyzing the Bundle Size
 
-### Definición de terminado para cada historia de usuario
+This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
 
-* Debes haber recibido _code review_ de al menos una compañera.
-* Haces _test_ unitarios y, además, has testeado tu producto manualmente.
-* Hiciste _tests_ de usabilidad e incorporaste el _feedback_ del usuario.
-* Desplegaste tu aplicación y has etiquetado tu versión (git tag).
+### Making a Progressive Web App
 
-## 5. Pistas, tips y lecturas complementarias
+This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
 
-1. Modelar los datos, es un paso muy importante, considera que el juego es de
-dos personas, pero más de una pareja puede estar jugando a la vez (modelo de
-salón de juego).
+### Advanced Configuration
 
-2. Haz un _fork_ de este repositorio (en GitHub). Luego que tus compañeras de
-proyecto hagan a su vez _fork_ de __tu__ repositorio. Recuerda, como en
-proyectos anteriores, que una de ustedes debe ser la integradora o _maestra_ del
-repositorio principal.
+This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
 
-3. Para facilidad piensa en una cuadrícula y que cada _barco_ solo ocupa una de
-ellas. Si quieres escalar en dificultad para este proyecto, puedes intentar con
-barcos de formas y tamaños diferentes.
+### Deployment
 
-4. Ten el concepto de turno y guarda de quién es el turno cada vez en la base de
-datos. También define la condición de término en una forma que tu código lo
-pueda detectar, como por ejemplo : todos los barcos se han hundido.
+This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
 
-5. Llevar el estado del juego es primordial, define bien las acciones,
-reducidores y datos que estarán en cada juego, turno y movida de los jugadores.
-Puedes hacer un diagrama de estados para esto :
-[diagrama-estados](https://www.lucidchart.com/pages/es/diagrama-de-maquina-de-estados)
+### `npm run build` fails to minify
 
-### Otros recursos
-
-#### Bibliotecas y componentes
-
-* [redux](https://es.redux.js.org/)
-* [animaciones-react](https://medium.com/@dmitrynozhenko/5-ways-to-animate-a-reactjs-app-in-2019-56eb9af6e3bf)
-* [animaciones-angular](https://blog.angularindepth.com/total-guide-to-dynamic-angular-animations-that-can-be-toggled-at-runtime-be5bb6778a0a)
-* [servicios-angular](https://angular.io/tutorial/toh-pt4)
-* [contexto-react](https://es.reactjs.org/docs/context.html)
-* [hooks-react](https://es.reactjs.org/docs/hooks-intro.html)
-* [Más animaciones para frameworks](https://popmotion.io/pose/)
-
-#### Conceptos
-
-* [observables](https://angular.io/guide/observables)
-* [visualizador-observables](https://rxviz.com/)
-* [visualizador-observables-2](https://rxmarbles.com/)
-
-## 6. Hacker edition
-
-Hasta el momento has usado javascript, html, css, react, angular, y otras
-herramientas para hacer tus aplicaciones, pero ¿qué tal si te aventuras con tu
-grupo a hacer este proyecto usando algún framework orientado a videojuegos?. Te
-invitamos a aceptar el desafío e intentar hacer el juego usando algún
-__game engine__ como los que están a continuación o el que tu encuentres en la
-internet:
-
-* [GDevelop](https://gdevelop-app.com/)
-* [Moddio](https://www.modd.io/)
-* [Construct](https://www.scirra.com)
-* [Babylon](https://www.babylonjs.com/)
-* [Impact](https://github.com/phoboslab/impact)
-* [Phaser](https://phaser.io)
+This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
