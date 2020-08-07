@@ -1,6 +1,5 @@
 import React from 'react';
 import './square.css';
-import RowSquares from './RowSquares';
 import Square from './Square';
 
 function Board() {
@@ -157,7 +156,6 @@ function Board() {
                         </tr>
                     </tbody>
                 </table>
-
             </div>
         </>
     );

@@ -1,0 +1,20 @@
+.planet-btn{
+    border: solid 3px white;
+    border-radius: 50px;
+    height: 20px;
+    width: 20px;
+    background: #7F00FF;
+}
+
+.planet-to-place{
+    border: solid 3px white;
+    border-radius: 50px;
+    height: 30px;
+    width: 30px;
+    background: #7F00FF;
+    margin: 10px;
+}
+
+.planet-to-place:active{
+    background: red;
+}

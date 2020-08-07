@@ -4,6 +4,10 @@
     width: 30px;
     height: 30px;
     margin: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
 }
 
 .board{
@@ -11,6 +15,9 @@
     width: fit-content;
     padding: 10px;
     border-radius: 5px;
+    transform: scale(1.2);
+    position: relative;
+    top: 30px;
 }
 
 thead, .letter{

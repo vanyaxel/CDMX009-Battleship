@@ -15,12 +15,10 @@ function HomeView() {
                 <div>
                     <p className='title-game'>CONQUERING PLANETS</p>
                 </div>
-                <Btn name="jugar" route='/user-info' />
-                <Btn name="instrucciones" route='/instructions' />
+                <Btn name="jugar" route='/game' classBtn='btn-play' classLink='route' />
+                <Btn name="instrucciones" route='/instructions' classBtn='btn-play' classLink='route' />
             </div>
-            <div className='container-imag-ovni1'>
-                <img className='img-ovni1' src={ovni1} alt="ovni1" />
-            </div>
+            <img className='img-ovni1' src={ovni1} alt="ovni1" />
         </>
     );
 }

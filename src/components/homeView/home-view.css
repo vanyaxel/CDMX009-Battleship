@@ -2,15 +2,15 @@
     display: flex;
     justify-content: flex-end;
     position: relative;
-    top: 80px;
+    top: 50px;
     right: 45px;
 }
 
 .space-ship{
     transform: rotate(30deg);
-    width: 350px;
+    width: 300px;
     position: relative;
-    right: 200px;
+    right: 50px;
 }
 
 .text-home-view{
@@ -20,7 +20,7 @@
 }
 
 .title-game{
-    font-size: 150px;
+    font-size: 125px;
     font-weight: 500;
     letter-spacing: -16px;
     color: #ffffff;
@@ -28,6 +28,8 @@
     width: 710px;
     line-height: 135px;
     text-align: center;
+    position: relative;
+    top: -50px;
 }
 
 .container-imag-ovni1{
@@ -38,5 +40,5 @@
 }
 
 .img-ovni1{
-    width: 400px;
+    width: 300px;
 }
