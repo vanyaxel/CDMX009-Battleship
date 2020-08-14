@@ -1,0 +1,60 @@
+
+.text-instruction-modal{
+    margin-bottom: 18px;
+    margin-top:0;
+    line-height: 35px;
+}
+
+.close-icon-modal{
+    display: flex;
+    justify-content: flex-end;
+    text-align: right;
+    font-family: 'Atma', cursive;
+    background-color: rgba(0, 0, 0, 0.65);
+}
+
+.ovni3{
+    position: relative;
+    top: 100px;
+    left: 350px;
+    width: 200px;
+}
+
+.bubble{
+    width: 300px;
+    position: relative;
+    top: 10px;
+    left: 340px;
+}
+
+.square-example-white{
+    background-color: #ff0000;
+    width: 28px;
+    height: 28px;
+    position: relative;
+    left: 1043px;
+    top: -30px;
+}
+
+.square-example-red{
+    background-color: #ffffff;
+    width: 28px;
+    height: 28px;
+    position: relative;
+    left: 922px;
+    top: -2px;
+}
+
+.arrow1{
+    transform: rotate(90deg);
+    width: 110px;
+    position: relative;
+    left: 880px;
+}
+
+.arrow2{
+    transform: rotate(90deg);
+    width: 110px;
+    position: relative;
+    left: 890px;
+}

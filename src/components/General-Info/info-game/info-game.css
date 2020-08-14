@@ -1,0 +1,70 @@
+.container-user-info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 25px 0;
+}
+
+.name-user-selected{
+    margin: 15px;
+}
+
+.text-general-info{
+    color: #ffffff;
+    font-size: 25px;
+    margin: 10px;
+}
+
+.input-name-user-selected{
+    border: none;
+    background: none;
+    width: 300px; 
+    height: 30px;
+    color: #ffffff;
+    font-family: 'Atma', cursive;
+    font-size: 25px;
+    font-weight: 500;
+    text-align: center;
+    padding-bottom: 0px;
+}
+
+.line-name-user-selected{
+    box-shadow: 0px 2px 11px 3px #80FF00;
+    width: 300px;
+    height: 4px;
+    background: #80FF00;
+    margin: 5px;
+}
+
+.input-name-user-selected::placeholder{
+    color: #ffffff;
+    font-family: 'Atma', cursive;
+    text-align: center;
+    font-size: 25px;
+}
+
+
+.btns-code-game{
+    display: flex;
+    flex-direction: column;
+}
+
+.container-place-planets{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 30px 0 0 0 ;
+}
+
+.text-place-planet{
+    display: flex;
+    align-items: center;
+}
+
+.container-planets{
+    width: 250px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
