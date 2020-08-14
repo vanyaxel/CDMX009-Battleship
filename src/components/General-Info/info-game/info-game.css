@@ -17,11 +17,7 @@
 }
 
 .input-name-user-selected{
-    border-bottom: 4px solid #80FF00;
-    border-top: none;
-    border-left: none;
-    border-right: none;
-    box-shadow: 0px 10px 16px -3px #80FF00;
+    border: none;
     background: none;
     width: 300px; 
     height: 30px;
@@ -30,8 +26,15 @@
     font-size: 25px;
     font-weight: 500;
     text-align: center;
-    padding-bottom: 7px;
+    padding-bottom: 0px;
+}
 
+.line-name-user-selected{
+    box-shadow: 0px 2px 11px 3px #80FF00;
+    width: 300px;
+    height: 4px;
+    background: #80FF00;
+    margin: 5px;
 }
 
 .input-name-user-selected::placeholder{

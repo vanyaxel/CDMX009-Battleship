@@ -5,7 +5,7 @@ import './planet.css';
 function Planet(props) {
     return (
         <>
-            <button className={props.classBtn}></button>
+            <div className={props.classBtn}></div>
         </>
     );
 }
