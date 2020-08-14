@@ -1,197 +1,51 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './square.css';
-
-import Square from './Square';
-
-const rows = ['A', 'B', ...]
-const columns  = [1, 2, 3, ]
+import Planet from '../General-Info/planet/Planet';
 
 function Board() {
 
-    rows.map(row => (
-    <tr>{ columns.map(col => (
-        <td data-position={`${row}${col+1}`}>{}</td>
-    ))}</tr>
-    ))
+    const [planet, setPlanet] = useState({
+        value: '',
+    });
 
-    const i = 0;
+    const [coordinates, setCoordinates] = useState([]);
+
+    const columns = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J'];
+    const rows = ['', 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+    var arrSquare = Array.apply(null, { length: 10 }).map(Number.call, Number);
+
+    const handleSelectLocation = (e) => {
+        let id = e.target.dataset.mydatafield;
+        const position = [id, ...coordinates];
+        setCoordinates(position);
+        console.log(position);
+    };
+
     return (
         <>
             <div className='board'>
                 <table>
                     <thead>
                         <tr>
-                            <td></td>
-                            <td>A</td>
-                            <td>B</td>
-                            <td>C</td>
-                            <td>D</td>
-                            <td>E</td>
-                            <td>F</td>
-                            <td>G</td>
-                            <td>H</td>
-                            <td>I</td>
-                            <td>J</td>
+                            {rows.map(row =>
+                                <td>{row}</td>
+                            )}
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td className='letter'>1</td>
-                            <td><Square value='1' /></td>
-                            <td><Square value='1' /></td>
-                            <td><Square value='1' /></td>
-                            <td><Square value='1' /></td>
-                            <td><Square value='1' /></td>
-                            <td><Square value='1' /></td>
-                            <td><Square value='1' /></td>
-                            <td><Square value='1' /></td>
-                            <td><Square value='1' /></td>
-                            <td><Square value='1' /></td>
-                            <td><Square value='1' /></td>
-                        </tr>
-                        <tr>
-                            <td className='letter'>2</td>
-                            <td><Square value='1' /></td>
-                            <td><Square value='1' /></td>
-                            <td><Square value='1' /></td>
-                            <td><Square value='1' /></td>
-                            <td><Square value='1' /></td>
-                            <td><Square value='1' /></td>
-                            <td><Square value='1' /></td>
-                            <td><Square value='1' /></td>
-                            <td><Square value='1' /></td>
-                            <td><Square value='1' /></td>
-                            <td><Square value='1' /></td>
-                        </tr>
-                        <tr>
-                            <td className='letter'>3</td>
-                            <td><Square value='1' /></td>
-                            <td><Square value='1' /></td>
-                            <td><Square value='1' /></td>
-                            <td><Square value='1' /></td>
-                            <td><Square value='1' /></td>
-                            <td><Square value='1' /></td>
-                            <td><Square value='1' /></td>
-                            <td><Square value='1' /></td>
-                            <td><Square value='1' /></td>
-                            <td><Square value='1' /></td>
-                            <td><Square value='1' /></td>
-                        </tr>
-                        <tr>
-                            <td className='letter'>3</td>
-                            <td><Square value='1' /></td>
-                            <td><Square value='1' /></td>
-                            <td><Square value='1' /></td>
-                            <td><Square value='1' /></td>
-                            <td><Square value='1' /></td>
-                            <td><Square value='1' /></td>
-                            <td><Square value='1' /></td>
-                            <td><Square value='1' /></td>
-                            <td><Square value='1' /></td>
-                            <td><Square value='1' /></td>
-                            <td><Square value='1' /></td>
-                        </tr>
-                        <tr>
-                            <td className='letter'>4</td>
-                            <td><Square value='1' /></td>
-                            <td><Square value='1' /></td>
-                            <td><Square value='1' /></td>
-                            <td><Square value='1' /></td>
-                            <td><Square value='1' /></td>
-                            <td><Square value='1' /></td>
-                            <td><Square value='1' /></td>
-                            <td><Square value='1' /></td>
-                            <td><Square value='1' /></td>
-                            <td><Square value='1' /></td>
-                            <td><Square value='1' /></td>
-                        </tr>
-                        <tr>
-                            <td className='letter'>5</td>
-                            <td><Square value='1' /></td>
-                            <td><Square value='1' /></td>
-                            <td><Square value='1' /></td>
-                            <td><Square value='1' /></td>
-                            <td><Square value='1' /></td>
-                            <td><Square value='1' /></td>
-                            <td><Square value='1' /></td>
-                            <td><Square value='1' /></td>
-                            <td><Square value='1' /></td>
-                            <td><Square value='1' /></td>
-                            <td><Square value='1' /></td>
-                        </tr>
-                        <tr>
-                            <td className='letter'>6</td>
-                            <td><Square value='1' /></td>
-                            <td><Square value='1' /></td>
-                            <td><Square value='1' /></td>
-                            <td><Square value='1' /></td>
-                            <td><Square value='1' /></td>
-                            <td><Square value='1' /></td>
-                            <td><Square value='1' /></td>
-                            <td><Square value='1' /></td>
-                            <td><Square value='1' /></td>
-                            <td><Square value='1' /></td>
-                            <td><Square value='1' /></td>
-                        </tr>
-                        <tr>
-                            <td className='letter'>7</td>
-                            <td><Square value='1' /></td>
-                            <td><Square value='1' /></td>
-                            <td><Square value='1' /></td>
-                            <td><Square value='1' /></td>
-                            <td><Square value='1' /></td>
-                            <td><Square value='1' /></td>
-                            <td><Square value='1' /></td>
-                            <td><Square value='1' /></td>
-                            <td><Square value='1' /></td>
-                            <td><Square value='1' /></td>
-                            <td><Square value='1' /></td>
-                        </tr>
-                        <tr>
-                            <td className='letter'>8</td>
-                            <td><Square value='1' /></td>
-                            <td><Square value='1' /></td>
-                            <td><Square value='1' /></td>
-                            <td><Square value='1' /></td>
-                            <td><Square value='1' /></td>
-                            <td><Square value='1' /></td>
-                            <td><Square value='1' /></td>
-                            <td><Square value='1' /></td>
-                            <td><Square value='1' /></td>
-                            <td><Square value='1' /></td>
-                            <td><Square value='1' /></td>
-                        </tr>
-                        <tr>
-                            <td className='letter'>9</td>
-                            <td><Square value='1' /></td>
-                            <td><Square value='1' /></td>
-                            <td><Square value='1' /></td>
-                            <td><Square value='1' /></td>
-                            <td><Square value='1' /></td>
-                            <td><Square value='1' /></td>
-                            <td><Square value='1' /></td>
-                            <td><Square value='1' /></td>
-                            <td><Square value='1' /></td>
-                            <td><Square value='1' /></td>
-                            <td><Square value='1' /></td>
-                        </tr>
-                        <tr>
-                            <td className='letter'>10</td>
-                            <td><Square value='1' /></td>
-                            <td><Square value='1' /></td>
-                            <td><Square value='1' /></td>
-                            <td><Square value='1' /></td>
-                            <td><Square value='1' /></td>
-                            <td><Square value='1' /></td>
-                            <td><Square value='1' /></td>
-                            <td><Square value='1' /></td>
-                            <td><Square value='1' /></td>
-                            <td><Square value='1' /></td>
-                            <td><Square value='1' /></td>
-                        </tr>
+                        {columns.map(col => (
+                            <tr>
+                                <td>{col}</td>
+                                {arrSquare.map(square => (
+                                    <td >
+                                        <button className='square' onClick={handleSelectLocation} data-mydatafield={`${col}${(square + 1)}`} >{planet.value}</button >
+                                    </td>
+                                ))}
+                            </tr>
+                        ))}
                     </tbody>
                 </table>
-            </div>
+            </div>;
         </>
     );
 }
