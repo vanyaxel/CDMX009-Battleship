@@ -4,16 +4,8 @@ import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import './game-view.css';
 
+import BoardOponent from '../board/BoardOponent';
 import ModalFullScreen from '../General-Info/modal-instructions/ModalFullScreen';
-
-
-const nameStyle = makeStyles({
-    color: 'white',
-    fontFamily: ['Atma',
-        'cursive'].join(', '),
-    position: 'relative',
-    top: 35,
-});
 
 const useStyles = makeStyles({
     nameText: {
@@ -51,7 +43,7 @@ function GameView() {
                         <Typography variant="h4" className={classes.nameTextOpponent} gutterBottom>
                             Oponente
                     </Typography>
-                        <Board />
+                        <BoardOponent />
                     </div>
                 </div>
                 <ModalFullScreen />

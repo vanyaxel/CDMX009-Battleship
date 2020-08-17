@@ -1,31 +1,27 @@
 import React, { useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import './square.css';
+import { coordinateCompared, planetAdded } from '../../store/planets';
 
+const columns = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J'];
+const rows = ['', 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
 function Board() {
+    const dispatch = useDispatch();
+    const planetsPlaced = useSelector(state => state.entities.planets);
 
-    const [coordinates, setCoordinates] = useState([]);
+    console.log(planetsPlaced);
+    /* const findPosition = (position) => coordenates.find(item => item.position === position);
+    const positionSelected = position =>;
+ */
+    const arrSquare = Array.apply(null, { length: 10 }).map(Number.call, Number);
 
-    const columns = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J'];
-    const rows = ['', 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-    var arrSquare = Array.apply(null, { length: 10 }).map(Number.call, Number);
-
-    const handleSelectLocation = (square, col) => {
-        console.log(coordinates);
-        let id = square + col;
-        if (coordinates.find(place => place !== id)) {
-            const position = [id, ...coordinates];
-            setCoordinates(position);
-            console.log(coordinates);
-        } else
-            return coordinates;
-
-        console.log(coordinates);
-
-        /*         let id = e.target.dataset.coordinate;
-                const position = [id, ...coordinates];
-                setCoordinates(position);
-                console.log(position); */
+    const handleSelectCoordinate = (e) => {
+        let coordinate = e.target.dataset.coordinate;
+        console.log(coordinate);
+        e.target.disabled = true;
+        //deshabilitar botton // condicion si ya fue seleccionada ya no se dispara el dispatch
+        dispatch(planetAdded(({ coordinate: coordinate })));
     };
 
     return (
@@ -33,7 +29,7 @@ function Board() {
             <div className='board'>
                 <table>
                     <thead>
-                        <tr >
+                        <tr>
                             {rows.map(row =>
                                 <td key={row}>{row}</td>
                             )}
@@ -45,7 +41,13 @@ function Board() {
                                 <td key={col}>{col}</td>
                                 {arrSquare.map(square => (
                                     <td >
-                                        <div className='square' onClick={() => { handleSelectLocation(col, (square + 1)); }} data-coordinate={`${col}${(square + 1)}`} ></div >
+                                        <button
+                                            className='square'
+                                            /* className={findPosition(`${row}${col}`) ? 'active' : 'inactive'}
+                                            onClick={findPosition(`${row}${col}`) ? handleSelectCoordinate : handleRemove} */
+                                            onClick={handleSelectCoordinate}
+                                            data-coordinate={`${col}${(square + 1)}`}
+                                        ></button>
                                     </td>
                                 ))}
                             </tr>
