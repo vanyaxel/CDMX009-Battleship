@@ -1,6 +1,7 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import './square.css';
+import { planetAddedP1, planetRemovedP1 } from '../../store/player1';
 import { planetAddedP2 } from '../../store/player2';
 
 const columns = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J'];
@@ -21,6 +22,20 @@ function Board() {
 
     const arrSquare = Array.apply(null, { length: 10 }).map(Number.call, Number);
 
+    const handleAddPosition = e => {
+        let coordinate = e.target.dataset.coordinate;
+        dispatch(planetAddedP1({ position: coordinate }));
+
+        /*         setTimeout(() => {
+                    const botPosition = generateRandomPosition(min, max);
+                    dispatch(planetAdded({ position: botPosition, board: 'bot' }));
+                }, 3000); */
+    };
+
+    const handleRemovePosition = e => {
+        let coordinate = e.target.dataset.coordinate;
+        dispatch(planetRemovedP1({ position: coordinate }));
+    };
 
     //Random number and letter ---> location bot 
     function randomPosition() {
@@ -49,13 +64,15 @@ function Board() {
                                 {arrSquare.map(square => (
                                     <td>
                                         {checkPosition(`${col}${(square + 1)}`) ? (
-                                            <div
+                                            <button
                                                 className='active-square'
-                                                data-coordinate={`${col}${(square + 1)}`}></div>
+                                                onClick={handleRemovePosition}
+                                                data-coordinate={`${col}${(square + 1)}`}></button>
                                         ) : (
-                                                <div
+                                                <button
                                                     className='inactive-square'
-                                                    data-coordinate={`${col}${(square + 1)}`}></div>
+                                                    onClick={handleAddPosition}
+                                                    data-coordinate={`${col}${(square + 1)}`}></button>
                                             )}
                                     </td>
                                 ))}

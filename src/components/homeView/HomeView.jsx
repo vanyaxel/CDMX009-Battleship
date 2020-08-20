@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import './home-view.css';
 
 import ovni1 from '../../images/ovni1.png';

@@ -3,36 +3,34 @@ import { createSlice } from '@reduxjs/toolkit';
 let lastId = 0;
 
 const slice = createSlice({
-    name: 'planets',
+    name: 'Player2',
     initialState: [],
     reducers: {
-        planetAdded: (planets, action) => {
-            if (planets.length < 10) {
-                planets.push({
+
+        planetAddedP2: (planetsLocation, action) => {
+            if (planetsLocation.length < 10) {
+                planetsLocation.push({
                     id: ++lastId,
                     position: action.payload.position,
                     guessLocation: false
                 });
             } else {
-                return planets;
+                console.log('ya no puedes guardar mas ubicaciones');
+                return planetsLocation;
             }
         },
 
-        planetRemoved: (planets, action) => {
-            return planets.filter(planet => planet.position !== action.payload.position);
-        },
-
-        coordinateCompared: (planets, action) => {
-            return planets.map(planet => {
+        coordinateComparedP2: (planetsLocation, action) => {
+            return planetsLocation.map(planet => {
                 if (planet.position === action.payload.position) {
                     return (planet.guessLocation = true);
                 } else {
-                    return planets;
+                    return planetsLocation;
                 }
             });
         }
     }
 });
 
-export const { planetAdded, planetRemoved, coordinateCompared } = slice.actions;
+export const { planetAdded, coordinateCompared } = slice.actions;
 export default slice.reducer;

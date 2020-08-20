@@ -1,6 +1,18 @@
-.square{
+.inactive-square{
     border: solid 2px #00FFFF;
     background: none;
+    width: 30px;
+    height: 30px;
+    margin: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+}
+
+.active-square{
+    border: solid 2px #ff0000;
+    background: #ff0000;
     width: 30px;
     height: 30px;
     margin: 3px;

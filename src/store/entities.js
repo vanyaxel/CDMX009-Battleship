@@ -1,10 +1,12 @@
 import { combineReducers } from 'redux';
-import planetsReducer from './planets';
+import player1Reducer from './player1';
+import player2Reducer from './player2';
 import userReducer from './user';
 import boardReducer from './boardOponent';
 
 export default combineReducers({
-    planets: planetsReducer,
+    player1: player1Reducer,
+    player2: player2Reducer,
     users: userReducer,
     boardOponent: boardReducer
 });

@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { BrowserRouter, Switch, Route, Link } from "react-router-dom";
+import React from "react";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
 import './App.css';
 
 import HomeView from './components/homeView/HomeView';

@@ -1,10 +1,12 @@
 import React from 'react';
 import Board from '../board/Board';
+import BoardOponent from '../board/BoardOponent';
+
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import './game-view.css';
 
-import BoardOponent from '../board/BoardOponent';
+import BoardPlayer1 from '../board/BoardPlayer1';
 import ModalFullScreen from '../General-Info/modal-instructions/ModalFullScreen';
 
 const useStyles = makeStyles({
@@ -37,13 +39,19 @@ function GameView() {
                             gutterBottom>
                             Vanya Xel
                     </Typography>
-                        <Board />
+                        <BoardOponent />
                     </div>
                     <div>
                         <Typography variant="h4" className={classes.nameTextOpponent} gutterBottom>
                             Oponente
                     </Typography>
-                        <BoardOponent />
+                        <BoardPlayer1 />
+                    </div>
+                    <div>
+                        <Typography variant="h4" className={classes.nameTextOpponent} gutterBottom>
+                            Oponente
+                    </Typography>
+                        <Board />
                     </div>
                 </div>
                 <ModalFullScreen />
