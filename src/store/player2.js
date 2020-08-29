@@ -23,14 +23,13 @@ const slice = createSlice({
         coordinateComparedP2: (planetsLocation, action) => {
             return planetsLocation.map(planet => {
                 if (planet.position === action.payload.position) {
-                    return (planet.guessLocation = true);
-                } else {
-                    return planetsLocation;
+                    return { ...planet, guessLocation: true };
                 }
+                return planet;
             });
         }
     }
 });
 
-export const { planetAdded, coordinateCompared } = slice.actions;
+export const { planetAddedP2, coordinateComparedP2 } = slice.actions;
 export default slice.reducer;

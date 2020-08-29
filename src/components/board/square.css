@@ -11,8 +11,8 @@
 }
 
 .active-square{
-    border: solid 2px #ff0000;
-    background: #ff0000;
+    border: solid 2px #00FFFF;
+    background: none;
     width: 30px;
     height: 30px;
     margin: 3px;
@@ -22,12 +22,15 @@
     padding: 0;
 }
 
+.MuiIcon-colorPrimary{
+    color: #7F00FF
+}
+
 .board{
     background-color: #000000c2;
     width: fit-content;
     padding: 20px;
     border-radius: 50px;
-    transform: scale(1);
     position: relative;
     top: 30px;
 }
@@ -38,4 +41,8 @@ thead, .letter{
 
 table{
     text-align: center;
+}
+
+.row{
+    color: white;
 }

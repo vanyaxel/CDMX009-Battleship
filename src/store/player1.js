@@ -25,6 +25,10 @@ const slice = createSlice({
         },
 
         coordinateComparedP1: (planetsLocation, action) => {
+            console.log('OMG', action);
+            // if (action.type === 'blah blah blah') {
+
+            // }
             return planetsLocation.map(planet => {
                 if (planet.position === action.payload.position) {
                     return (planet.guessLocation = true);
