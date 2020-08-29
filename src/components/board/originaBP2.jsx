@@ -4,8 +4,8 @@ import './square.css';
 import { planetAddedP1, planetRemovedP1 } from '../../store/player1';
 import { planetAddedP2 } from '../../store/player2';
 
-const rows = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J'];
-const columns = ['', 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+const columns = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J'];
+const rows = ['', 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
 function Board() {
     const dispatch = useDispatch();
@@ -18,13 +18,18 @@ function Board() {
      * @returns boolean
      */
     const checkPosition = (position) =>
-        planetsPlacedPlayer1.some(place => place.position === position);
+        planetsPlacedPlayer2.some(place => place.position === position);
 
     const arrSquare = Array.apply(null, { length: 10 }).map(Number.call, Number);
 
     const handleAddPosition = e => {
         let coordinate = e.target.dataset.coordinate;
-        dispatch(planetAddedP1({ position: coordinate }));
+        dispatch(planetAddedP2({ position: coordinate }));
+
+        /*         setTimeout(() => {
+            const botPosition = generateRandomPosition(min, max);
+            dispatch(planetAdded({ position: botPosition, board: 'bot' }));
+        }, 3000); */
     };
 
     const handleRemovePosition = e => {
@@ -33,13 +38,7 @@ function Board() {
     };
 
     //Random number and letter ---> location bot 
-    function randomPosition() {
-        let rowArr = rows.shift();
-        let letter = columns[Math.floor(Math.random() * (columns.length))];
-        let number = rows[Math.floor(Math.random() * (rows.length))];
 
-        return letter + number;
-    }
 
     return (
         <>
@@ -55,7 +54,7 @@ function Board() {
                     <tbody>
                         {columns.map(col => (
                             <tr>
-                                <td key={col} className='row'>{col}</td>
+                                <td key={col}>{col}</td>
                                 {arrSquare.map(square => (
                                     <td>
                                         {checkPosition(`${col}${(square + 1)}`) ? (
