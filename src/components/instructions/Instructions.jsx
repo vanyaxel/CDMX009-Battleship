@@ -16,9 +16,7 @@ function Instructions() {
 
                     <p className='text-instructions'>Gana el que adivine todas las ubicaciones de los planetas de su contrincante</p>
                 </div>
-                <div className='btn-instruction'>
-                    <Btn name="jugar" route='/user-info' />
-                </div>
+                <Btn name="jugar" route='/game' classLink='link-instructions' classBtn='btn-instruction' />
             </div>
         </>
 
