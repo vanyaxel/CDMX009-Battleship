@@ -1,4 +1,4 @@
-.inactive-square{
+.square{
     border: solid 2px #00FFFF;
     background: none;
     width: 30px;
@@ -10,11 +10,34 @@
     padding: 0;
 }
 
-.active-square{
+.square-div{
     border: solid 2px #00FFFF;
     background: none;
-    width: 30px;
-    height: 30px;
+    width: 26px;
+    height: 26px;
+    margin: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+}
+
+.guess-square{
+    border: solid 2px red;
+    background: red;
+    width: 26px;
+    height: 26px;
+    margin: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+}
+.failed-square{
+    border: solid 2px red;
+    background: burlywood;
+    width: 26px;
+    height: 26px;
     margin: 3px;
     display: flex;
     justify-content: center;

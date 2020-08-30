@@ -28,6 +28,11 @@
     color: #ffffff;
 }
 
+.route:hover{
+    color: #000000;
+    font-weight: 600;
+}
+
 .btn-instruction{
     position: relative;
     top: 30px;
@@ -54,8 +59,16 @@
     color: white;
 }
 
-.code{
-   position: relative;
-   top: 20px;
-   width: 220px;    
+.oponent{
+    position: relative;
+    top: 20px;
+    width: 220px;    
+    font-size: 25px;
+}
+
+.oponent:hover{
+    position: relative;
+    top: 20px;
+    width: 220px;    
+    font-size: 20px;
 }

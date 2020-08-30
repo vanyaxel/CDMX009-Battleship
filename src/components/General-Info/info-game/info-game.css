@@ -63,7 +63,7 @@
 }
 
 .container-planets{
-    width: 250px;
+    width: 300px;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
