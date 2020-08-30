@@ -7,6 +7,6 @@ import boardReducer from './boardOponent';
 export default combineReducers({
     player1: player1Reducer,
     player2: player2Reducer,
-    users: userReducer,
+    user: userReducer,
     boardOponent: boardReducer
 });

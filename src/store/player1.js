@@ -1,6 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 let lastId = 0;
+let counter = 0;
 
 const slice = createSlice({
     name: 'Player1',
@@ -25,10 +26,14 @@ const slice = createSlice({
         },
 
         coordinateComparedP1: (planetsLocation, action) => {
-            console.log('OMG', action);
-            // if (action.type === 'blah blah blah') {
-
-            // }
+            return planetsLocation.map(planet => {
+                if (planet.position === action.payload.position) {
+                    return { ...planet, guessLocation: true };
+                }
+                return planet;
+            });
+        }
+        /* coordinateComparedP1: (planetsLocation, action) => {
             return planetsLocation.map(planet => {
                 if (planet.position === action.payload.position) {
                     return (planet.guessLocation = true);
@@ -36,7 +41,7 @@ const slice = createSlice({
                     return planetsLocation;
                 }
             });
-        }
+        }, */
     }
 });
 
