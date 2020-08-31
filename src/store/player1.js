@@ -33,17 +33,10 @@ const slice = createSlice({
                 return planet;
             });
         }
-        /* coordinateComparedP1: (planetsLocation, action) => {
-            return planetsLocation.map(planet => {
-                if (planet.position === action.payload.position) {
-                    return (planet.guessLocation = true);
-                } else {
-                    return planetsLocation;
-                }
-            });
-        }, */
     }
 });
 
 export const { planetAddedP1, planetRemovedP1, coordinateComparedP1 } = slice.actions;
 export default slice.reducer;
+
+export const getNotGuessedLocationP1 = state => state.entities.player1.filter(location => !location.guessLocation);

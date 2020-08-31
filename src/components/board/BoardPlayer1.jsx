@@ -1,9 +1,7 @@
-/* import React from 'react';
+import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import './square.css';
-import { planetAddedP1, planetRemovedP1 } from '../../store/player1';
-import { planetAddedP2 } from '../../store/player2';
-import { userAdded } from '../../store/user';
+import { planetAddedP1 } from '../../store/player1';
 import FiberManualRecord from '@material-ui/icons/FiberManualRecord';
 
 const columns = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J'];
@@ -14,30 +12,28 @@ function Board() {
     const dispatch = useDispatch();
 
     const planetsPlacedPlayer1 = useSelector(state => state.entities.player1);
+    const locationNotGuessed = useSelector(state => state.entities.randomLocation);
 
-    function getInfoLocalStorage() {
-        let user = JSON.parse(localStorage.getItem('userPlayer1'));
+    useEffect(() => {
         let player1 = JSON.parse(localStorage.getItem('player1'));
-
-        let name = user[0].name;
-        dispatch(userAdded({ name: name }));
-
-        console.log(player1);
 
         player1.forEach(location => {
             dispatch(planetAddedP1({ position: location.position }));
         });
-    }
+    }, []);
 
     const checkPosition = (position) =>
         planetsPlacedPlayer1.some(place => place.position === position);
+
+    const isPositionGuessed = position => planetsPlacedPlayer1.find(place => (place.position === position && place.guessLocation) ? true : false);
+
+    const isPositionNotGuessed = position => locationNotGuessed.find(place => place.position === position) ? true : false;
 
     const arrSquare = Array.apply(null, { length: 10 }).map(Number.call, Number);
 
     return (
         <>
             <div className='board'>
-                <button onClick={getInfoLocalStorage}>data</button>
                 <table>
                     <thead>
                         <tr>
@@ -54,12 +50,15 @@ function Board() {
                                     <td>
                                         {checkPosition(`${col}${(square + 1)}`) ? (
                                             <div
-                                                className='square-div'
-                                                data-coordinate={`${col}${(square + 1)}`}><FiberManualRecord className='MuiIcon-colorPrimary' /></div>
+                                                className={isPositionGuessed(`${col}${(square + 1)}`) ? 'guess-square' : 'square'}
+                                                data-coordinate={`${col}${(square + 1)}`}>
+                                                <FiberManualRecord className='MuiIcon-colorPrimary' />
+                                            </div>
                                         ) : (
                                                 <div
-                                                    className='square-div'
-                                                    data-coordinate={`${col}${(square + 1)}`}></div>
+                                                    className={isPositionNotGuessed(`${col}${(square + 1)}`) ? 'failed-guess-square' : 'square'}
+                                                    data-coordinate={`${col}${(square + 1)}`}>
+                                                </div>
                                             )}
                                     </td>
                                 ))}
@@ -71,12 +70,12 @@ function Board() {
             </div>
         </>
     );
-}
+};
 
 export default Board;
- */
 
-import React, { useEffect } from 'react';
+
+/* import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import './square.css';
 import { planetAddedP1 } from '../../store/player1';
@@ -105,30 +104,19 @@ function Board() {
 
     const arrSquare = Array.apply(null, { length: 10 }).map(Number.call, Number);
 
+    const oponentPositions = () => {
+        let letter = columns[Math.floor(Math.random() * (columns.length))];
+        let number = rows[Math.floor(Math.random() * (rows.length))];
+        let position = (number + letter);
 
+        const getPlacePlayer1 = position => planetsPlacedPlayer1.find(place => place.position === position);
 
+        console.log(position, getPlacePlayer1(position));
 
+        return position;
+    };
 
-    /*  const getPlace = position => planetsPlacedPlayer2.find(place => place.position === position);
- 
- 
-     const isPositionGuessed = position => planetsPlacedPlayer2.find(place => place.position === position && place.guessLocation) ? true : false;
- 
-     const comparePosition = (position) => {
-         const place = getPlace(position);
-         if (!place || place.guessLocation === true) {
-             setTimeout(() => {
-                 oponentPositions();
-             }, 1000);
-             return;
-         } else {
-             dispatch(coordinateComparedP2({ position, guessLocation: true }));
-             setTimeout(() => {
-                 console.log('atinaste');
-             }, 1000);
-             return;
-         }
-     }; */
+    console.log('player board 1', oponentPositions());
 
     return (
         <>
@@ -172,3 +160,6 @@ function Board() {
 };
 
 export default Board;
+
+
+ */

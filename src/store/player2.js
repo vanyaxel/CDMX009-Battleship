@@ -33,3 +33,5 @@ const slice = createSlice({
 
 export const { planetAddedP2, coordinateComparedP2 } = slice.actions;
 export default slice.reducer;
+
+export const getNotGuessedLocationP2 = state => state.entities.player2.filter(location => !location.guessLocation);
