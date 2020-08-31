@@ -35,7 +35,8 @@
 
 .btn-instruction{
     position: relative;
-    top: 30px;
+    top: -40px;
+    right: 30px;
     border-radius: 50px;
     border: solid 7px #00FFFF;
     box-shadow: 0px 0px 9px 3px #00FFFF;

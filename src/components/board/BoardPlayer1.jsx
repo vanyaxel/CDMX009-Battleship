@@ -34,7 +34,7 @@ function Board() {
 
     return (
         <>
-            <div className='board'>
+            <div className='board1'>
                 <table>
                     <thead>
                         <tr>
@@ -51,13 +51,13 @@ function Board() {
                                     <td>
                                         {checkPosition(`${col}${(square + 1)}`) ? (
                                             <div
-                                                className={isPositionGuessed(`${col}${(square + 1)}`) ? 'guess-square' : 'square'}
+                                                className={isPositionGuessed(`${col}${(square + 1)}`) ? 'guess-square-div' : 'square-div'}
                                                 data-coordinate={`${col}${(square + 1)}`}>
                                                 <FiberManualRecord className='MuiIcon-colorPrimary' />
                                             </div>
                                         ) : (
                                                 <div
-                                                    className={isPositionNotGuessed(`${col}${(square + 1)}`) ? 'failed-guess-square' : 'square'}
+                                                    className={isPositionNotGuessed(`${col}${(square + 1)}`) ? 'failed-guess-square-div' : 'square-div'}
                                                     data-coordinate={`${col}${(square + 1)}`}>
                                                 </div>
                                             )}

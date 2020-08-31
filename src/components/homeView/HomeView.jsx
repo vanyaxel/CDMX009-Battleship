@@ -9,17 +9,19 @@ function HomeView() {
 
     return (
         <>
-            <div className='container-space-ship'>
-                <img src={spaceShip} alt="space-ship" className='space-ship' />
-            </div>
-            <div className='text-home-view'>
-                <div>
-                    <p className='title-game'>CONQUERING PLANETS</p>
+            <div className='home-view'>
+                <div className='container-ovni1'>
+                    <img className='img-ovni1' src={ovni1} alt="ovni1" />
                 </div>
-                <Btn name='jugar' route='/general-info' classBtn='btn-play' classLink='route' />
-                <Btn name='instrucciones' route='/instructions' classBtn='btn-play' classLink='route' />
+                <div className='container-text-home'>
+                    <p className='title-game'>CONQUERING PLANETS</p>
+                    <Btn name='jugar' route='/general-info' classBtn='btn-play' classLink='route' />
+                    <Btn name='instrucciones' route='/instructions' classBtn='btn-play' classLink='route' />
+                </div>
+                <div className='container-img-ovni1'>
+                    <img src={spaceShip} alt="space-ship" className='space-ship' />
+                </div>
             </div>
-            <img className='img-ovni1' src={ovni1} alt="ovni1" />
         </>
     );
 }

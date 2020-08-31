@@ -55,7 +55,7 @@ function InfoGame() {
                 <div className='line-name-user-selected'></div>
             </div>
             <div className='container-place-planets'>
-                <div className='text-place-planet'>
+                <div className='text-place-planet planets'>
                     <p className='text-general-info'>Acomoda tus planetas en el tablero</p>
                     <ModalInstructions />
                 </div>

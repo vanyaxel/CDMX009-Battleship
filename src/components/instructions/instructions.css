@@ -1,4 +1,4 @@
-.container-instruction-view{
+/* .container-instruction-view{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -42,6 +42,57 @@
 
 .text-instructions{
     margin: 10px 0;
+    line-height: 25px;
+    font-size: 20px;
+    position: relative;
+    top: -15px;
+} */
+
+.container-instruction-view{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.ovni2{
+    width: 150px;
+    z-index: 1;
+    position: relative;
+    top: -200px;
+}
+
+.container-instruction-btn{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.container-instructions{
+    background-color: #000000c2;
+    border: solid 5px #7F00FF;
+    box-shadow: 0px 0px 40px 10px #7F00FF;
+    border-radius: 50px;
+    color: white;
+    padding: 40px;
+    width: 600px;
+    height: 350px;
+    margin: 30px 100px 0 0;
+    text-align: center;
+
+}
+
+.title-instructions{
+    line-height: 75px;
+    font-size: 75px;
+    font-weight: 500;
+    margin: 0 0 40px 0;
+}
+
+.text-instructions{
+    margin: 20px 0;
     line-height: 25px;
     font-size: 20px;
     position: relative;

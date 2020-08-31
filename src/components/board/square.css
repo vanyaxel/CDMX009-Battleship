@@ -12,6 +12,8 @@
 
 .square:disabled{
     background-color: gray;
+    border: solid 2px gray;
+
 }
 
 .square-div{
@@ -26,7 +28,8 @@
     padding: 0;
 }
 
-.failed-guess-square{
+
+.failed-guess-square-div{
     border: solid 2px gray;
     background: gray;
     width: 26px;
@@ -50,6 +53,18 @@
     padding: 0;
 }
 
+.guess-square-div{
+    border: solid 2px red;
+    background: red;
+    width: 26px;
+    height: 26px;
+    margin: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+}
+
 .MuiIcon-colorPrimary{
     color: #7F00FF
 }
@@ -59,8 +74,14 @@
     width: fit-content;
     padding: 20px;
     border-radius: 50px;
-    position: relative;
-    top: 30px;
+}
+
+.board1{
+    background-color: #000000c2;
+    width: fit-content;
+    padding: 20px;
+    border-radius: 50px;
+    transform: scale(0.9);
 }
 
 thead, .letter{

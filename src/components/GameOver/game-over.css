@@ -1,0 +1,19 @@
+.game-over-view{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.698);
+}
+
+.ovni4{
+    position: relative;
+    bottom: 60px;
+}
+
+.text-game-over{
+    font-size: 70px;
+    font-weight: 600;
+    color: white;
+}
