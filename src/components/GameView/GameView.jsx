@@ -50,7 +50,7 @@ function GameView() {
     return (
         <>
             {
-                statusGameP1 === 9 || statusGameP2 === 9 ?
+                statusGameP1 === 1 || statusGameP2 === 1 ?
                     (
                         <GameOver />
 
