@@ -2,8 +2,8 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import './square.css';
 import { coordinateComparedP1 } from '../../store/player1';
-
 import { planetAddedP2, coordinateComparedP2 } from '../../store/player2';
+import { locationAdded } from '../../store/randomLocation';
 
 const rows = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J'];
 const columns = ['', 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
@@ -33,9 +33,9 @@ function Board() {
 
     const oponentPositions = () => {
 
-        let number = columnsRandom[Math.floor(Math.random() * (columns.length))];
+        let number = columnsRandom[Math.floor(Math.random() * (columnsRandom.length))];
         let letter = rows[Math.floor(Math.random() * (rows.length))];
-        let position = (number + letter);
+        let position = (letter + number);
 
         const getPlacePlayer1 = position => planetsPlacedPlayer1.find(place => place.position === position);
 
@@ -43,7 +43,8 @@ function Board() {
         console.log(position, prueba);
 
         if (prueba === undefined) {
-            console.log('prueba 1234567890');
+            dispatch(locationAdded({ position: position }));
+            //console.log('prueba 1234567890');
         } else (
             dispatch(coordinateComparedP1({ position, guessLocation: true }))
         );
@@ -57,7 +58,7 @@ function Board() {
 
         if (!place || place.guessLocation === true) {
             setTimeout(() => {
-                console.log('no atendiaste');
+                //console.log('no atendiaste');
                 oponentPositions();
 
             }, 1000);
@@ -65,7 +66,7 @@ function Board() {
         } else {
             dispatch(coordinateComparedP2({ position, guessLocation: true }));
             setTimeout(() => {
-                console.log('atinaste');
+                //console.log('atinaste');
                 oponentPositions();
 
             }, 1000);

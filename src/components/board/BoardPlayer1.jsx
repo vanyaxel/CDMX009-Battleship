@@ -2,7 +2,6 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import './square.css';
 import { planetAddedP1 } from '../../store/player1';
-import { planetAddedP2 } from '../../store/player2';
 import FiberManualRecord from '@material-ui/icons/FiberManualRecord';
 
 const columns = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J'];
@@ -13,6 +12,7 @@ function Board() {
     const dispatch = useDispatch();
 
     const planetsPlacedPlayer1 = useSelector(state => state.entities.player1);
+    const locationNotGuessed = useSelector(state => state.entities.randomLocation);
 
     useEffect(() => {
         let player1 = JSON.parse(localStorage.getItem('player1'));
@@ -27,21 +27,9 @@ function Board() {
 
     const isPositionGuessed = position => planetsPlacedPlayer1.find(place => (place.position === position && place.guessLocation) ? true : false);
 
+    const isPositionNotGuessed = position => locationNotGuessed.find(place => place.position === position) ? true : false;
+
     const arrSquare = Array.apply(null, { length: 10 }).map(Number.call, Number);
-
-    const oponentPositions = () => {
-        let letter = columns[Math.floor(Math.random() * (columns.length))];
-        let number = rows[Math.floor(Math.random() * (rows.length))];
-        let position = (number + letter);
-
-        const getPlacePlayer1 = position => planetsPlacedPlayer1.find(place => place.position === position);
-
-        console.log(position, getPlacePlayer1(position));
-
-        return position;
-    };
-
-    console.log('player board 1', oponentPositions());
 
     return (
         <>
@@ -68,7 +56,7 @@ function Board() {
                                             </div>
                                         ) : (
                                                 <div
-                                                    className='square'
+                                                    className={isPositionNotGuessed(`${col}${(square + 1)}`) ? 'failed-guess-square' : 'square'}
                                                     data-coordinate={`${col}${(square + 1)}`}>
                                                 </div>
                                             )}
