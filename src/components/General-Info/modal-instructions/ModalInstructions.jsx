@@ -36,7 +36,7 @@ export default function ModalInstructions() {
                 <Button onClick={handleClose} color="primary" className={classes.closeIcon}> x</Button>
                 <DialogContent className={classes.containerText}>
                     <DialogContentText id="alert-dialog-description" className={classes.text}>
-                        <p className='text-instruction-modal'>Selecciona el planeta &#40;circulo&#41; que quieres poner en el tablero dando un click sobre el y posteriormente da click en la posición en la que lo deseas colocar dentro del tablero.</p>
+                        <p className='text-instruction-modal'>Elige la posicion dentro del tablero y has click sobre la casilla, tienes 10 planeta para ubicarlos en la posición que tu elijas.</p>
                         <p className='text-instruction-modal'>¡Una vez que tienes tus planetas guarda el tablero y a jugar!</p>
                     </DialogContentText>
                 </DialogContent>
