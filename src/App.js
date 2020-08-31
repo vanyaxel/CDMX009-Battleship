@@ -1,16 +1,16 @@
 import React from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
-import './App.css';
+
+import configureStore from './store/configureStore';
+import { Provider } from 'react-redux';
 
 import HomeView from './components/homeView/HomeView';
 import Instructions from './components/instructions/Instructions';
 import GeneralInfo from './components/General-Info/general-info/GeneralInfo';
-import Loser from './components/Loser';
-import Winner from './components/Winner';
 import GameView from "./components/GameView/GameView";
 
-import configureStore from './store/configureStore';
-import { Provider } from 'react-redux';
+import './App.css';
+
 
 const store = configureStore();
 
@@ -22,8 +22,6 @@ function App() {
           <Switch>
             <Route exact path="/" render={() => <HomeView />} />
             <Route path="/instructions" render={() => <Instructions />} />
-            <Route path="/winner" render={() => <Winner />} />
-            <Route path="/loser" render={() => <Loser />} />
             <Route path="/general-info" render={() => <GeneralInfo />} />
             <Route path='/game' render={() => <GameView />} />
           </Switch>

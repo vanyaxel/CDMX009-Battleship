@@ -1,9 +1,5 @@
-import React, { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-
-import BoardPlayer1 from '../board/BoardPlayer1';
-import BoardPlayer2 from '../board/BoardPlayer2';
-import Winner from '../Winner';
+import React from 'react';
+import { useSelector } from 'react-redux';
 
 import { getNotGuessedLocationP1 } from '../../store/player1';
 import { getNotGuessedLocationP2 } from '../../store/player2';
@@ -12,9 +8,11 @@ import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import './game-view.css';
 
+import BoardPlayer1 from '../board/BoardPlayer1';
+import BoardPlayer2 from '../board/BoardPlayer2';
+import Winner from '../Winner';
 import ModalFullScreen from '../General-Info/modal-instructions/ModalFullScreen';
 
-import { userAdded } from '../../store/user';
 
 const useStyles = makeStyles({
     nameText: {
@@ -37,19 +35,11 @@ const useStyles = makeStyles({
 function GameView() {
     const classes = useStyles();
 
-    const dispatch = useDispatch();
-
-    const user = useSelector(state => state.entities.user);
-
     const notGuessedP1 = useSelector(getNotGuessedLocationP1);
     const notGuessedP2 = useSelector(getNotGuessedLocationP2);
 
     let statusGameP1 = notGuessedP1.length;
     let statusGameP2 = notGuessedP2.length;
-
-    console.log('player 1', notGuessedP1);
-    console.log('player 2', notGuessedP2);
-
 
     let userLS = JSON.parse(localStorage.getItem('userPlayer1'));
 
