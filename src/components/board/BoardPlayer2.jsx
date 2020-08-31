@@ -72,7 +72,7 @@ function Board() {
 
     return (
         <>
-            <div className='board'>
+            <div className='board1'>
                 <table>
                     <thead>
                         <tr>

@@ -10,7 +10,7 @@ import './game-view.css';
 
 import BoardPlayer1 from '../board/BoardPlayer1';
 import BoardPlayer2 from '../board/BoardPlayer2';
-import Winner from '../Winner';
+import GameOver from '../GameOver/GameOver';
 import ModalFullScreen from '../General-Info/modal-instructions/ModalFullScreen';
 
 
@@ -19,16 +19,18 @@ const useStyles = makeStyles({
         color: 'white',
         fontFamily: ['Atma',
             'cursive'].join(', '),
-        position: 'relative',
-        top: 35,
+        paddingLeft: '20px',
+        marginTop: '80px',
+        marginBottom: 0,
     },
     nameTextOpponent: {
         color: 'white',
         fontFamily: ['Atma',
             'cursive'].join(', '),
-        position: 'relative',
-        top: 35,
-        textAlign: 'right'
+        textAlign: 'right',
+        paddingRight: '20px',
+        marginTop: '80px',
+        marginBottom: 0,
     }
 });
 
@@ -47,37 +49,39 @@ function GameView() {
 
     return (
         <>
-            <div className='game-view'>
-                {
-                    statusGameP1 === 1 || statusGameP2 === 1 ?
-                        (
-                            <Winner />
+            {
+                statusGameP1 === 9 || statusGameP2 === 9 ?
+                    (
+                        <GameOver />
 
-                        ) : (
-                            <>
-                                <div className='game-view'>
-                                    <div className='game-boards'>
+                    ) : (
+                        <>
+                            <div className='div1'>
+                                <div className='div2'>
+                                    <div className='div3'>
                                         <Typography variant="h4" className={classes.nameText}
                                             gutterBottom>
                                             {namePlayer1}
                                         </Typography>
                                         <BoardPlayer1 />
                                     </div>
-                                    <div className='game-boards'>
+                                    <div className='div3' >
                                         <Typography variant="h4" className={classes.nameTextOpponent} gutterBottom>
                                             Oponente
                                     </Typography>
                                         <BoardPlayer2 />
                                     </div>
-                                    <div>
-                                        <ModalFullScreen />
-                                    </div>
                                 </div>
-                            </>
-                        )
-                }
+                                <div className='btn-inst-game'>
+                                    <ModalFullScreen />
+                                </div>
 
-            </div>
+                            </div>
+
+                        </>
+                    )
+            }
+
         </>
     );
 }

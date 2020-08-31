@@ -29,32 +29,34 @@
 
 .square-example-white{
     background-color: #ff0000;
-    width: 28px;
-    height: 28px;
+    width: 26px;
+    height: 26px;
     position: relative;
-    left: 1043px;
-    top: -30px;
+    left: 220px;
+    top: 122px;
 }
 
 .square-example-red{
-    background-color: #ffffff;
-    width: 28px;
-    height: 28px;
+    background-color: #b4b4b4;
+    width: 26px;
+    height: 26px;
     position: relative;
-    left: 922px;
-    top: -2px;
+    left: 291px;
+    top: 148px;
 }
 
 .arrow1{
     transform: rotate(90deg);
-    width: 110px;
+    width: 80px;
     position: relative;
-    left: 880px;
+    left: 265px;
+    top: 150px;
 }
 
 .arrow2{
     transform: rotate(90deg);
-    width: 110px;
+    width: 80px;
     position: relative;
-    left: 890px;
+    left: 110px;
+    top: 150px;
 }

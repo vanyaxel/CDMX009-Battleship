@@ -3,17 +3,12 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    margin: 25px 0;
-}
-
-.name-user-selected{
-    margin: 15px;
 }
 
 .text-general-info{
     color: #ffffff;
     font-size: 25px;
-    margin: 10px;
+    margin: 10px 0 10px 0;
 }
 
 .input-name-user-selected{
@@ -34,7 +29,6 @@
     width: 300px;
     height: 4px;
     background: #80FF00;
-    margin: 5px;
 }
 
 .input-name-user-selected::placeholder{
@@ -53,7 +47,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 30px 0 0 0 ;
+}
+
+.planets{
+    margin-top: 30px;
 }
 
 .text-place-planet{
