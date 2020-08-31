@@ -1,14 +1,16 @@
 import React from 'react';
+
+import useStyles from './stylesModal';
+
+import bubble from './images/bubble.png';
+import arrow from './images/arrow.svg';
+import ovni3 from './images/ovni3.png';
+
 import Button from '@material-ui/core/Button';
 import Dialog from '@material-ui/core/Dialog';
 import CloseIcon from '@material-ui/icons/Close';
 import Slide from '@material-ui/core/Slide';
 import './modal.css';
-
-import useStyles from './stylesModal';
-import bubble from './images/bubble.png';
-import arrow from './images/arrow.svg';
-import ovni3 from './images/ovni3.png';
 
 const Transition = React.forwardRef(function Transition(props, ref) {
     return <Slide direction="up" ref={ref} {...props} />;

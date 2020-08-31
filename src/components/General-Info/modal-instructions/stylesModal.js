@@ -1,7 +1,6 @@
 import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles({
-    //modal interrogación
     paper: {
         width: 600,
         height: 400,
@@ -45,7 +44,6 @@ const useStyles = makeStyles({
         height: 20,
         padding: 0,
     },
-    //modal instrucciones
     btnModal: {
         borderRadius: 40,
         border: 'solid 7px #00FFFF',
